@@ -215,12 +215,114 @@
 
 //例外処理
 // const a='hellow';
-const a=5;
-try{
-console.log(a.toUpperCase());
-}catch(e){
-console.log(e.message);}
-console.log('Finish!');
+// const a=5;
+// try{
+// console.log(a.toUpperCase());
+// }catch(e){
+// console.log(e.message);}
+// console.log('Finish!');
+//
 
 
+
+//Document Object Model/Document
+
+// document.body.textContent = 'Hello';
+// document.title='Changed!';
+
+// document.getElementById('target').textContent = "Changed!";
+
+// document.querySelector('h1').textContent ='H1';
+// document.querySelectorAll('li:nth-child(odd)').forEach(li => {
+//   li.textContent = 'li!';
+// });
+ // const ul =document.querySelector('ul');
+
+ // console.log(ul.parentNode);//body
+ // console.log(ul.children);//li
+ // console.log(ul.children[0]);//li
+
+// for(let i=0; i<ul.children.length;i++){
+//   console.log(ul.children[i].textContent);
+// }
+
+//要素の属性を操作してみよう
+// const h1 =document.querySelector("h1");
+//
+// console.log(h1.title);
+// h1.title='changed';
+//
+// h1.style.color ='gray';
+// h1.style.backgroundColor ='pink';
+
+//HTMLのカスタムの属性
+// const h1 =document.querySelector('h1');
+//
+// console.log(h1.dataset.appId);
+// h1.dataset.message='this is custom message';
+
+
+//classListを使ってみよう
+// const div =document.querySelector('div');
+// div.className ='box border-pink';
+
+// div.classList.add('border-pink');
+// div.classList.remove('box');
+// if((div.classList.add('border-pink')){
+//   div.classList.remove('box');
+// }else{
+//   div.classList.add('border-pink');
+// }
+// div.classList.toggle('border-pink');
+
+
+//要素を生成してみよう
+// const h1 =document.createElement('h1');
+// h1.textContent='Title';
+// document.body.appendChild(h1);
+//
+// const p =document.createElement('p');
+// p.textContent='Hello';
+// document.body.appendChild(p);
+//
+// const h2 =document.createElement('h2');
+// h2.textContent='Sub Hello';
+// document.body.insertBefore(h2,p);
+
+//const copy=p.cloneNode(true);
+// const copy=p.cloneNode(false);
+// document.body.insertBefore(copy,h2);
+// document.body.removeChild(h2);
+
+//テキスト入力部分の操作
+// const text =document.querySelector('input[type="text"]');
+// const textarea=document.querySelector('textarea');
+//
+// console.log(text.value);
+// console.log(textarea.value);
+
+// text.focus();
+// text.select();
+// text.disabled=true;
+
+//イベントリスナーを使ってみよう
+// const button=document.querySelector('button');
+//
+// button.addEventListener('dblclick',() => {
+//   console.log('clicked');
+// });
+
+//イベントオブジェクト
+// const div=document.querySelector('div');
+//
+// document.addEventListener('mousemove',e => {
+// div.textContent=`${e.clientX}:${e.clientY}`;
+// });
+const a =document.querySelector('a');
+const span =document.querySelector('span');
+a.addEventListener('click', e => {
+  e.preventDefault();
+  a.classList.add('hidden');
+  span.classList.remove('hidden');
+})
 }
