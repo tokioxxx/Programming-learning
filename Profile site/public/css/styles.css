@@ -1,0 +1,189 @@
+
+body{
+ color: #333;
+ font-family:Verdana,sans-serif;
+ margin :0;
+}
+
+header{
+  text-align: right;
+  padding: 20px;
+  background-image:
+  height: 240px;
+background-size:cover;
+background-position: 50% 50%;
+margin-bottom:60px;
+background: 	#000000;
+}
+
+
+
+header ul{
+  margin :0;
+  list-style-type:none;
+  padding-left:0;
+
+}
+header li{
+  display:inline-block;
+
+  padding:4px 20px;
+  font-size:12px;
+}
+header li > a{
+  text-decoration:none;
+  color:inherit;
+  padding:4px 20px;
+  font-size:18px;
+display:inline-block;
+}
+
+header li > a:hover{
+  color:royalblue;
+
+
+}
+
+ .current{
+color:white;
+}
+
+
+.container{
+  padding-right:40px;
+    padding-left:40px;
+  /* text-align: center; */
+    margin-top :0;
+}
+
+section p {
+margin-top: 60px;
+}
+
+
+
+
+
+
+section h1 {
+  font-weight: normal;
+  margin-top :30px;
+  margin-bottom: 0px;
+
+  letter-spacing: 4px;
+}
+section a {
+
+  font-weight: normal;
+  margin-top :0;
+  margin-bottom: 100px;
+letter-spacing: 1px;
+
+}
+
+.photo{
+border-radius:50%;
+border:5px solid white;
+box-shadow:0 0 5px gray;
+  float:right;
+
+}
+
+
+
+section2 p{
+  float:right;
+
+
+}
+section2 h2{
+
+
+   margin-top:100px;
+}
+section2 h3{
+
+
+   margin-top:50px;
+}
+
+section3 h2{
+
+
+   margin-top:100px;
+}
+
+.contact{
+  margin-top:60px;
+}
+section3 h2{
+  margin-bottom:100px;
+  margin-top:100px;
+}
+
+.icon{
+  /* text-align: right; */
+  padding: 20px;
+margin-bottop:60px;
+}
+
+footer{
+  padding-right:0px;
+    padding-left:0px;
+  /* text-align:center; */
+background-size:cover;
+  padding: 20px 0;
+  background-image:
+  height: 240px;
+  /* width:400px; */
+  margin:0 auto ;
+
+background: 	#000000;
+}
+
+
+
+
+
+
+footer p{
+  color:lightgray;
+  font-size:14px;
+
+}
+
+
+
+
+@media screen and (max-width: 480px){
+.container{
+    text-align: center;
+}
+
+.photo{
+
+float:none;
+}
+.apple{
+  width:130px;
+  height:270px;
+}
+
+.clock{
+  width:250px;
+  height:160px;
+}
+.icon{
+  width:40px;
+  height:40px;
+}
+}
+
+@media screen and (min-width:781px){
+  .photo{
+    border: none;
+margin-right:100px;
+width:280px;
+height:280px;
+  }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Profile site</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+ <meta name="description" content="プロフィールサイトです">
+ <link rel="stylesheet" href="css/styles.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+  <div id="up-arrow"style="position:fixed;right:5px;bottom:50px"><a href="#"><img src="icon_012360_256.png"></a></div>
+  <div id="pos" style="position:fixed;left:5px;bottom:5px"></div>
+
+
+  <script>
+        $(function(){
+          // #で始まるリンクをクリックしたら実行されます
+          $('a[href^="#"]').click(function() {
+            // スクロールの速度
+            var speed = 400; // ミリ秒で記述
+            var href= $(this).attr("href");
+            var target = $(href == "#" || href == "" ? 'html' : href);
+            var position = target.offset().top;
+            $('body,html').animate({scrollTop:position}, speed, 'swing');
+            return false;
+          });
+        });
+        $(function(){
+  // bacl-to-topを消す
+  $('#up-arrow').hide();
+  // スクロールが十分さえれたら#back-to-topを表示，スクロールが戻ったら非表示
+    $(window).scroll(function(){
+
+      if ($(this).scrollTop()>60 ){
+        $('#up-arrow').fadeIn();
+      }else{
+        $('#up-arrow').fadeOut();
+      }
+    });
+    // クリックされたら上に戻る
+    $('#up-arrow a').click(function(){
+      $('html,body').animate({
+        scrollTop:0
+      },500);
+      return false;
+    });
+  });
+
+      </script>
+</head>
+
+<body>
+
+  <header>
+      <nav>
+        <ul>
+      <li class="current">
+
+
+        <a href="#works">
+        Works
+         </a>
+
+          <a href="#contact">
+          Contact
+           </a>
+          </li>
+       </ul>
+      </nav>
+    </header>
+
+
+<div class="container">
+<section>
+
+
+<img src="photo.png" width ="200" height="200" alt="自分の写真" class="photo">
+
+<h1>千葉工業大学 知能メディア工学科</h1>
+
+  <h1>田中時生</h1>
+  <a>Tanaka Tokio</p>
+
+
+<p>1997年8月29日千葉県松戸市に生まれた。中学高校はバドミントン部に所属していた。<br>
+  趣味は音楽。大学の友人とバンドを組んでおり、ベースとキーボードを担当している。<br>
+  チャレンジ精神旺盛なため、楽器は何でも挑戦してみたい。大学時代はプログラミング<br>
+  と情報デザインについて学んだ。卒業研究はwebサイトについての研究を行なっている<br>
+  ため、現在はweb制作について自主的に学習している。
+</p>
+</section>
+<div id="works">
+
+  <section2>
+  <h2>Work</h2>
+    <h3>健康アプリ</h3>
+  <img src="works.png" width="250" height="480" alt="アプリの写真" class="apple">
+  <img src="works2.png" width="250" height="480" alt="アプリの写真" class="apple">
+
+
+  <p>アプリケーションのプロトタイプをadobe XDを用いて制作した。ペルソナを”運動不<br>
+    足の忙しい人”に設定し、実際にインタビュー調査を実施した。インタビューを通して<br>
+    ユーザーの生の声を聞くことで、ニーズを深く掘り下げて制作に取り組むことがで<br>
+    きた。この体験は、ユーザーの期待以上のものを制作するということに興味を持つこ<br>
+    とのきっかけに繋がったと思っている。
+  </p>
+<h2>時計</h2>
+  <video src="clock.mp4" controls width="500" height="320" class=clock></video>
+<p>数人のグループでprocessingを使い時計を制作した。制作にあたり、グループ内で役割<br>
+  分担をしプログラムを担当した。工夫した点は、yahoo天気から天気情報を取得し、天気<br>
+  によって背景の色が変わるという機能を搭載した部分である。また、ターゲットユーザー<br>
+  を”朝が早い人”という設定にしていたため、アラーム機能をつけ目覚まし時計として活<br>
+  用できるようにした。</p>
+
+</section2>
+</div>
+<div id="contact">
+<section3>
+<div class="section3">
+<h2>Contact</h2>
+
+<a href="mailto:tokio1997829@gmail.com" target="_blank">
+<img src="icon_044681_256.png" width="70" height="70" alt="mailへ" class="icon">
+
+</a>
+<a href="https://www.instagram.com/tokio_wmd845" target="_blank">
+<img src="icon_051071_256.png" width="70" height="70" alt="Instagramへ"class="icon">
+</a>
+
+<a href="https://www.facebook.com/profile.php?id=100026193079193" target="_blank">
+  <img src="icon_017871_256.png" width="70" height="70" alt="facebookへ"class="icon">
+</a>
+</section3>
+
+</div>
+</div>
+</div>
+
+
+
+<footer>
+
+  <p>(c) 2019 Tanaka Tokio All Right Reserved.</p>
+  </footer>
+</body>
+</html>
